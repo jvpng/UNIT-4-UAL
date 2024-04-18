@@ -1,15 +1,28 @@
 ! version = 2.0
 
-+ hello
-- Hello, what is your name?
++ (hello|hi|hey|yo)
+- Should I know you? (weight5) 
+- Strange, whats ur name? I don`t think ive seen you before
 
-+ _
-% hello what is your name
-- Nice to meet you <formal>!
++ no
+- Okay then why are you here
 
 + my name is *
 - Nice to meet you <star>
 - Nice meeting you <star>
+
+// Test
+
++ test
+- Ok let's test
+
++ *
+% ok let us test
+* <star> == yes => OK great!
+* <star> == no => Boo!
+- You need to say yes or no...
+
+// End test
 
 + thank you
 - You are welcome
@@ -22,3 +35,14 @@
 - I am afraid that I can not understand you
 - Sorry can you please elaborate that for me
 - I don't get it!
+
++ knock knock
+- Who's there?
+
++ *
+% who is there
+- <star> who?
+
++ *
+% * who
+- LOL! <star>! That's funny!
